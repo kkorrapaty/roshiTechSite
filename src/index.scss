@@ -1,1 +1,10 @@
 @import '~bootstrap/scss/bootstrap';
+
+.info {
+  background-color: lightgray;
+
+  h3 {
+    text-align: center;
+    color: dodgerBlue;
+  }
+}
