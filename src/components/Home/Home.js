@@ -3,29 +3,11 @@ import { Redirect } from 'react-router-dom'
 import Button from 'react-bootstrap/Button'
 import Carousel from 'react-bootstrap/Carousel'
 import carousel1 from '../../carousel1-homepage.jpg'
-import carousel2 from '../../carousel2-alm.png'
-
-// Contact Form
-
-// import Form from 'react-bootstrap/Form'
-// <Form>
-//   <Form.Group controlId='firstName'>
-//     <Form.Label>First Name</Form.Label>
-//     <Form.Control
-//       type="text"
-//       name="information"
-//       placeholder="Enter First Name"
-//     />
-//   </Form.Group>
-//   <Form.Group controlId='lastName'>
-//     <Form.Label>Last Name</Form.Label>
-//     <Form.Control
-//       type="text"
-//       name="information"
-//       placeholder="Enter Last Name"
-//     />
-//   </Form.Group>
-// </Form>
+import QA from './QA'
+import ConfigMan from './ConfigMan'
+import ALM from './ALM'
+import ChangeMan from './ChangeMan'
+import MobileAppDev from './MobileAppDev'
 
 export default class Home extends Component {
   constructor (props) {
@@ -63,42 +45,22 @@ export default class Home extends Component {
 
               Roshi Tech works with you as a partner to maintain a &quot;Win-Win&quot; relationship. Most of our customers are long term partners and we get lots of repeat business from our customers. We got many customers from satisfied people like you, who refer our services.
               </h6>
-            </div>
+            </div> <br />
           </Carousel.Item>
           <Carousel.Item>
-            <div className='info'>
-              <center> <img src={carousel2} /> </center>
-              <h3>Application Life Cycle Management (ALM)</h3>
-              <h6>
-              ALM is the new mantra for Integrated Software Development Environment (ISDE). Roshi Tech has been providing ISDE for its clients. It helps in identifying the right tools for an organization depending on their current and future growth needs and budgets. Roshi Tech partnered with multiple vendors to provide a right set of tools. It also helped its clients to upgrade their environments to more appropriate tools. <br /> <br />
-
-              ALM includes...
-              </h6>
-              <ul>
-                <li>Requirements Management tools</li>
-                <li>Code Management</li>
-                <li>Requirements Management tools</li>
-                <li>Testing tools</li>
-                <li>Tracking tools</li>
-                <li>Release Management</li>
-              </ul>
-            </div>
+            <ALM /> <br />
           </Carousel.Item>
           <Carousel.Item>
-            <div className='info'>
-              <img src={carousel2} />
-              <h3>Configuration Management</h3>
-              <ul>
-                <li>Roshi Tech Inc. is a leading provider of Integrated Computing Environment solutions, designed to enable our clients to cost effectively manage and develop their IT environment successfully</li>
-                <li>Expertise in Change Management and Version Control tools ( ClearCase, Subversion, CVS, Accurev, Perforce, VSS, Starbase and PVCS)</li>
-                <li>Process suggestion, Install, Maintain</li>
-                <li>Integration with other tools</li>
-                <li>Process automation using triggers</li>
-                <li>Tools Administration</li>
-                <li>Build and Release engineering using tools and scripts (Maven, Ant, Clearmake, gnu Make, PERL, Shell etc..)</li>
-                <li>Web enabling</li>
-              </ul>
-            </div>
+            <ConfigMan /> <br />
+          </Carousel.Item>
+          <Carousel.Item>
+            <QA /> <br />
+          </Carousel.Item>
+          <Carousel.Item>
+            <ChangeMan /> <br />
+          </Carousel.Item>
+          <Carousel.Item>
+            <MobileAppDev /> <br />
           </Carousel.Item>
         </Carousel>
 

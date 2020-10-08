@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import Nav from 'react-bootstrap/Nav'
 import Navbar from 'react-bootstrap/Navbar'
+import NavDropdown from 'react-bootstrap/NavDropdown'
 import logo from '../../Roshi-Tech-Logo.jpg'
 
 const authenticatedOptions = (
@@ -20,6 +21,11 @@ const unauthenticatedOptions = (
 const alwaysOptions = (
   <Fragment>
     <Nav.Link href="/">Home</Nav.Link>
+    <NavDropdown title="About Us" id="basic-nav-dropdown">
+      <NavDropdown.Item href="#aboutus/">Company Overview</NavDropdown.Item>
+      <NavDropdown.Item href="#management-team/">Management Team</NavDropdown.Item>
+      <NavDropdown.Item href="#service-models/">Service Models</NavDropdown.Item>
+    </NavDropdown>
   </Fragment>
 )
 

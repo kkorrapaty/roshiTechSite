@@ -11,6 +11,8 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 
 // import Home Page
 import Home from '../Home/Home'
+// import About Us Page
+import AboutUs from '../AboutUs/AboutUs'
 
 class App extends Component {
   constructor () {
@@ -47,6 +49,9 @@ class App extends Component {
         <main className="container">
           <Route exact path='/' render={() => (
             <Home user={user} />
+          )} />
+          <Route exact path='/aboutus' render={() => (
+            <AboutUs user={user} />
           )} />
 
           <Route path='/sign-up' render={() => (
