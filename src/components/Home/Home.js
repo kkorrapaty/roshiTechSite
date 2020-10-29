@@ -38,13 +38,6 @@ export default class Home extends Component {
             <div className='info'>
               <img src={carousel1} />
               <h3>Welcome to Roshi Tech, Inc</h3>
-              <h6>
-              Roshi Tech is a consulting firm which specializes in understanding your requirements; we study and suggest services that are tailored to your business, your challenges, and your people. <br /> <br />
-
-              Our goal is to get you to move past planning, and to begin implementing. Our work is based on real business issues to produce tangible and bottom line outcomes. We use the context of your business to develop the strategies and behaviors necessary for success in today&apos;s market driven climate. <br /> <br />
-
-              Roshi Tech works with you as a partner to maintain a &quot;Win-Win&quot; relationship. Most of our customers are long term partners and we get lots of repeat business from our customers. We got many customers from satisfied people like you, who refer our services.
-              </h6>
             </div> <br />
           </Carousel.Item>
           <Carousel.Item>
@@ -64,16 +57,25 @@ export default class Home extends Component {
           </Carousel.Item>
         </Carousel>
 
-        <div>
-          <Button variant="primary" onClick={() => {
-            this.move()
-          }}>Contact Us</Button>
-        </div>
       </div>
     )
     return (
       <div>
         {jsx}
+        <h6>
+        Roshi Tech is a consulting firm which specializes in understanding your requirements; we study and suggest services that are tailored to your business, your challenges, and your people. <br /> <br />
+
+        Our goal is to get you to move past planning, and to begin implementing. Our work is based on real business issues to produce tangible and bottom line outcomes. We use the context of your business to develop the strategies and behaviors necessary for success in today&apos;s market driven climate. <br /> <br />
+
+        Roshi Tech works with you as a partner to maintain a &quot;Win-Win&quot; relationship. Most of our customers are long term partners and we get lots of repeat business from our customers. We got many customers from satisfied people like you, who refer our services.
+        </h6>
+
+        <div>
+          <Button variant="primary" onClick={() => {
+            this.move()
+          }}>Contact Us</Button>
+        </div>
+
       </div>
     )
   }
