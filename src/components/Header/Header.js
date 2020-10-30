@@ -20,7 +20,7 @@ const unauthenticatedOptions = (
 
 const alwaysOptions = (
   <Fragment>
-    <Nav.Link href="/">Home</Nav.Link>
+    <Nav.Link href="#/">Home</Nav.Link>
     <NavDropdown title="About Us" id="basic-nav-dropdown">
       <NavDropdown.Item href="#aboutus/">Company Overview</NavDropdown.Item>
       <NavDropdown.Item href="#management-team/">Management Team</NavDropdown.Item>
