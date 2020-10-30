@@ -26,6 +26,9 @@ const alwaysOptions = (
       <NavDropdown.Item href="#management-team/">Management Team</NavDropdown.Item>
       <NavDropdown.Item href="#service-models/">Service Models</NavDropdown.Item>
     </NavDropdown>
+    <NavDropdown title="Services" id="basic-nav-dropdown">
+      <NavDropdown.Item href="#project-management">Project Management</NavDropdown.Item>
+    </NavDropdown>
   </Fragment>
 )
 

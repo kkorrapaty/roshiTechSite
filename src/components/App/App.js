@@ -13,6 +13,10 @@ import ChangePassword from '../ChangePassword/ChangePassword'
 import Home from '../Home/Home'
 // import About Us Page
 import AboutUs from '../AboutUs/AboutUs'
+// import ManagementTeam from aboutUsDrop
+import ManagementTeam from '../AboutUs/ManagementTeam'
+// import ServiceModels from aboutUsDrop
+import ServiceModels from '../AboutUs/ServiceModels'
 
 class App extends Component {
   constructor () {
@@ -53,7 +57,12 @@ class App extends Component {
           <Route exact path='/aboutus' render={() => (
             <AboutUs user={user} />
           )} />
-
+          <Route exact path='/management-team' render={() => (
+            <ManagementTeam user={user} />
+          )} />
+          <Route exact path='/service-models' render={() => (
+            <ServiceModels user={user} />
+          )} />
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />
           )} />

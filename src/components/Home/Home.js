@@ -56,7 +56,6 @@ export default class Home extends Component {
             <MobileAppDev /> <br />
           </Carousel.Item>
         </Carousel>
-
       </div>
     )
     return (
