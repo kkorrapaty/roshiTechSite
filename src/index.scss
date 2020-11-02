@@ -6,11 +6,11 @@
 }
 
 body {
-  background-color: lightgray;
+  background-color: white;
 }
 
 .info {
-  background-color: lightgray;
+  background-color: white;
 
   h3 {
     text-align: center;
@@ -33,8 +33,39 @@ span {
   font-weight: bold;
 }
 
-.basic-nav-dropdown {
+// NavDropdown
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown {
   font-size: 13px;
+}
+
+// Carousell
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 30px;
+  width: 30px;
+  outline: lightgray;
+  background-size: 100%, 100%;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 15px;
+  color: lightgray;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 15px;
+  color: lightgray;
 }
 
 // loader class
