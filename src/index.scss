@@ -2,7 +2,7 @@
 
 * {
   // font-family: 'Raleway', sans-serif;
-font-family: 'Noto Sans HK', sans-serif;
+  font-family: 'Noto Sans HK', sans-serif;
 }
 
 body {
@@ -31,6 +31,10 @@ body {
 
 span {
   font-weight: bold;
+}
+
+.basic-nav-dropdown {
+  font-size: 13px;
 }
 
 // loader class
