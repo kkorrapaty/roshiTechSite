@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 
 import { signIn } from '../../api/auth'
 import messages from '../AutoDismissAlert/messages'
@@ -13,7 +13,8 @@ class SignIn extends Component {
 
     this.state = {
       email: '',
-      password: ''
+      password: '',
+      signUpRoute: false
     }
   }
 
@@ -44,8 +45,18 @@ class SignIn extends Component {
       })
   }
 
+  noAcc () {
+    this.setState({
+      signUpRoute: true
+    })
+  }
+
   render () {
-    const { email, password } = this.state
+    const { email, password, signUpRoute } = this.state
+
+    if (signUpRoute) {
+      return <Redirect to="/sign-up/"/>
+    }
 
     return (
       <div className="row">
@@ -80,6 +91,9 @@ class SignIn extends Component {
             >
               Submit
             </Button>
+            <Button variant="link" type="submit" onClick={(ref) => {
+              this.noAcc()
+            }}>Don&apos;t Have An Account?</Button>
           </Form>
         </div>
       </div>

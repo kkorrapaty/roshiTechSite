@@ -13,22 +13,24 @@ const authenticatedOptions = (
 
 const unauthenticatedOptions = (
   <Fragment>
-    <Nav.Link href="#sign-up">Sign Up</Nav.Link>
-    <Nav.Link href="#sign-in">Sign In</Nav.Link>
+    <NavDropdown title="Profile">
+      <NavDropdown.Item href="#sign-up/" className="basic-nav-dropdown">Sign Up</NavDropdown.Item>
+      <NavDropdown.Item href="#sign-in/" className="basic-nav-dropdown">Sign In</NavDropdown.Item>
+    </NavDropdown>
   </Fragment>
 )
 
 const alwaysOptions = (
   <Fragment>
+    <NavDropdown title="Services">
+      <NavDropdown.Item href="#project-management" className="basic-nav-dropdown">Project Management</NavDropdown.Item>
+    </NavDropdown>
+    <NavDropdown title="About Us">
+      <NavDropdown.Item href="#aboutus/" className="basic-nav-dropdown">Company Overview</NavDropdown.Item>
+      <NavDropdown.Item href="#management-team/" className="basic-nav-dropdown">Management Team</NavDropdown.Item>
+      <NavDropdown.Item href="#service-models/" className="basic-nav-dropdown">Service Models</NavDropdown.Item>
+    </NavDropdown>
     <Nav.Link href="#/">Home</Nav.Link>
-    <NavDropdown title="About Us" id="basic-nav-dropdown">
-      <NavDropdown.Item href="#aboutus/">Company Overview</NavDropdown.Item>
-      <NavDropdown.Item href="#management-team/">Management Team</NavDropdown.Item>
-      <NavDropdown.Item href="#service-models/">Service Models</NavDropdown.Item>
-    </NavDropdown>
-    <NavDropdown title="Services" id="basic-nav-dropdown">
-      <NavDropdown.Item href="#project-management">Project Management</NavDropdown.Item>
-    </NavDropdown>
   </Fragment>
 )
 
@@ -41,8 +43,8 @@ const Header = ({ user }) => (
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto">
         { user && <span className="navbar-text mr-2">Welcome, {user.email}</span>}
-        { alwaysOptions }
         { user ? authenticatedOptions : unauthenticatedOptions }
+        { alwaysOptions }
       </Nav>
     </Navbar.Collapse>
   </Navbar>

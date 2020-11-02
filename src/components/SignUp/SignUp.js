@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { withRouter } from 'react-router-dom'
+import { withRouter, Redirect } from 'react-router-dom'
 
 import { signUp, signIn } from '../../api/auth'
 import messages from '../AutoDismissAlert/messages'
@@ -14,7 +14,8 @@ class SignUp extends Component {
     this.state = {
       email: '',
       password: '',
-      passwordConfirmation: ''
+      passwordConfirmation: '',
+      signInRoute: false
     }
   }
 
@@ -46,8 +47,18 @@ class SignUp extends Component {
       })
   }
 
+  haveAcc () {
+    this.setState({
+      signInRoute: true
+    })
+  }
+
   render () {
-    const { email, password, passwordConfirmation } = this.state
+    const { email, password, passwordConfirmation, signInRoute } = this.state
+
+    if (signInRoute) {
+      return <Redirect to="/sign-in"/>
+    }
 
     return (
       <div className="row">
@@ -93,6 +104,9 @@ class SignUp extends Component {
             >
               Submit
             </Button>
+            <Button variant="link" type="submit" onClick={(ref) => {
+              this.haveAcc()
+            }}>Already Have An Account?</Button>
           </Form>
         </div>
       </div>
