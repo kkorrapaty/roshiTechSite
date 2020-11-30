@@ -8,17 +8,22 @@ import ConfigMan from './ConfigMan'
 import ALM from './ALM'
 import ChangeMan from './ChangeMan'
 import MobileAppDev from './MobileAppDev'
+import AboutUs from '../AboutUs/AboutUs'
+import ManagementTeam from '../AboutUs/ManagementTeam'
+import ServiceModels from '../AboutUs/ServiceModels'
 
 export default class Home extends Component {
   constructor (props) {
     super(props)
     // set state values
     this.state = {
+      // route to find contact information
       contactRoute: false
     }
   }
 
   move () {
+    // after onClick, sets route to true to Redirect
     this.setState({
       contactRoute: true
     })
@@ -73,8 +78,11 @@ export default class Home extends Component {
           <Button variant="primary" onClick={() => {
             this.move()
           }}>Contact Us</Button>
-        </div>
+        </div> <br /> <br />
 
+        <AboutUs /> <br /> <br />
+        <ManagementTeam /> <br />
+        <ServiceModels /> <br />
       </div>
     )
   }
