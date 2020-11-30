@@ -32,4 +32,4 @@ The process began by looking at the original site, and understanding the essenti
 
 ## Future Updates
 
-I would like to add the functionality for users to search the site and go to the respective route. Also, when signed in, the registered users should see auhtorized links and specific services that are relevant to them.
+I would like to add the functionality for users to search the site and go to the respective route. Also, when signed in, the registered users should see authorized links and specific services that are relevant to them.
