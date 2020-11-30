@@ -17,6 +17,8 @@ import AboutUs from '../AboutUs/AboutUs'
 import ManagementTeam from '../AboutUs/ManagementTeam'
 // import ServiceModels from aboutUsDrop
 import ServiceModels from '../AboutUs/ServiceModels'
+// import ProjectManagement from Services
+import ProjectManagement from '../Services/ProjectManagement'
 
 class App extends Component {
   constructor () {
@@ -54,14 +56,17 @@ class App extends Component {
           <Route exact path='/' render={() => (
             <Home user={user} />
           )} />
-          <Route exact path='/aboutus' render={() => (
-            <AboutUs user={user} />
+          <Route path='/aboutus' id={'aboutus'} render={() => (
+            <AboutUs user={user} id='aboutus'/>
           )} />
-          <Route exact path='/management-team' render={() => (
-            <ManagementTeam user={user} />
+          <Route path='/management-team' id={'management-team'} render={() => (
+            <ManagementTeam user={user} id={'management-team'} />
           )} />
           <Route exact path='/service-models' render={() => (
             <ServiceModels user={user} />
+          )} />
+          <Route exact path='/project-management' render={() => (
+            <ProjectManagement user={user} />
           )} />
           <Route path='/sign-up' render={() => (
             <SignUp msgAlert={this.msgAlert} setUser={this.setUser} />

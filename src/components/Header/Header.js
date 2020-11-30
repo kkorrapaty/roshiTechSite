@@ -28,8 +28,8 @@ const alwaysOptions = (
       <NavDropdown.Item href="#project-management" className="nav-dropdown">Project Management</NavDropdown.Item>
     </NavDropdown>
     <NavDropdown title="About Us" id="basic-nav-dropdown">
-      <NavDropdown.Item href="#aboutus/" className="nav-dropdown">Company Overview</NavDropdown.Item>
-      <NavDropdown.Item href="#management-team/" className="nav-dropdown">Management Team</NavDropdown.Item>
+      <NavDropdown.Item href="#/aboutus/" className="nav-dropdown">Company Overview</NavDropdown.Item>
+      <NavDropdown.Item href='#/management-team/' className="nav-dropdown">Management Team</NavDropdown.Item>
       <NavDropdown.Item href="#service-models/" className="nav-dropdown">Service Models</NavDropdown.Item>
     </NavDropdown>
     <Nav.Link href="#/">Home</Nav.Link>
